@@ -88,3 +88,23 @@ class Item
   end
 end
 
+# Create a list of items
+items = [
+  Item.new("Aged Brie", 10, 20),
+  Item.new("Backstage passes to a TAFKAL80ETC concert", 15, 20),
+  Item.new("Sulfuras, Hand of Ragnaros", 0, 80),
+  Item.new("Conjured", 5, 7),
+  Item.new("Normal Item", 5, 10)
+]
+
+# Pass the list to GildedRose
+gilded_rose = GildedRose.new(items)
+
+# Update quality and sell_in for each item
+gilded_rose.update_quality()
+
+# Print the updated state of each item
+items.each do |item|
+  puts item.to_s
+end
+
